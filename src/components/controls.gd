@@ -1,0 +1,37 @@
+extends Node
+
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = "text"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+
+
+signal l
+signal r
+signal u
+signal d
+
+func _on_leftbtn_pressed() -> void:
+	emit_signal("l")
+
+
+func _on_upbtn_pressed() -> void:
+	emit_signal("u")
+
+
+func _on_rightbtn_pressed() -> void:
+	emit_signal("r")
+
+
+func _on_downbtn_pressed() -> void:
+	emit_signal("d")
